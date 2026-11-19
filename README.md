@@ -64,3 +64,6 @@ Among the viewers tested, only the `keek` viewer was able to open the `missing-c
 
 None of the viewers tested could open the `unterminated.json` and `binary-data.json` files.
 
+## License
+
+[MIT](LICENSE)
