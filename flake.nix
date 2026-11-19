@@ -98,7 +98,7 @@
             };
           };
 
-        lock =
+        keek =
           let
             lastModifiedDate = self.lastModifiedDate or self.lastModified or "19700101";
             version = "${builtins.substring 0 8 lastModifiedDate}-${self.shortRev or "dirty"}";
@@ -147,7 +147,7 @@
           pre-commit-check = check { profile = "release"; };
         };
 
-        packages.default = lock;
+        packages.default = keek;
         devShells.default = devShell;
       }
     );
