@@ -30,6 +30,7 @@ The `keek` uses the parser from the [`lazy_json`](https://github.com/mnmun/lazy_
 <img src="https://github.com/mnmun/images/blob/main/rat.png?raw=true" align="left">
 
 <br>
+<br>
 
 The `keek's` interface is built with the [`ratwrap`](https://github.com/mnmun/ratwrap) crate - a retained-mode wrapper around the [`ratatui`](https://docs.rs/ratatui/0.30.2/ratatui/) crate that provides a widget tree with guard-based incremental updates.
 
