@@ -81,10 +81,7 @@ impl Builder {
     }
 }
 
-pub trait AppearanceMethods {
-    // TODO убрать в реализацию AppearanceGuard
-    fn edit_wheel<F: FnOnce(wheel::Guard<'_>)>(&mut self, f: F) -> &mut Self;
-}
+pub trait AppearanceMethods {}
 
 #[allow(dead_code)]
 fn assert_methods() {
@@ -106,8 +103,13 @@ impl<'a> AppearanceGuard<'a> {
     }
 }
 
-impl AppearanceMethods for AppearanceGuard<'_> {
-    fn edit_wheel<F: FnOnce(wheel::Guard<'_>)>(&mut self, f: F) -> &mut Self {
+impl AppearanceMethods for AppearanceGuard<'_> {}
+
+impl AppearanceGuard<'_> {
+    pub fn edit_wheel<T, F: FnOnce(wheel::Guard<'_>) -> T>(
+        &mut self,
+        f: F,
+    ) -> T {
         let mut wheel = self
             .widget
             .edit_items_appearance(|_, item| {
@@ -122,10 +124,6 @@ impl AppearanceMethods for AppearanceGuard<'_> {
         f(self
             .inner
             .wheel
-            .edit(wheel.widget_mut().as_paragraph_mut_ref().unwrap().edit()));
-
-        drop(wheel);
-
-        self
+            .edit(wheel.widget_mut().as_paragraph_mut_ref().unwrap().edit()))
     }
 }

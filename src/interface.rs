@@ -16,7 +16,6 @@ use crate::{
         base,
         column::PlacementMethods as _,
         controls,
-        info::AppearanceMethods as _,
         overlay::{AppearanceMethods as _, PlacementMethods as _},
         print::{CompositionMethods as _, PlacementMethods as _},
         table::{
