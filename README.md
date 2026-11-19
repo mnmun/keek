@@ -2,7 +2,7 @@
 
 A simple JSON file viewer with a terminal user interface, designed to handle large files. Select values in the viewer, and they will be printed to `stdout` when you exit.
 
-![](assets/demo.gif)
+<p align="center"><img src="https://github.com/mnmun/keek/blob/main/assets/demo.gif?raw=true"></p>
 
 Run it with [`cargo`](https://doc.rust-lang.org/cargo/):
 
@@ -52,7 +52,7 @@ The table below compares the programs memory consumption, in mebibytes (**MiB**)
 
 The plot below provides a clearer comparison:
 
-![](assets/plot.png)
+<p align="center"><img src="https://github.com/mnmun/keek/blob/main/assets/plot.png?raw=true"></p>
 
 Among the programs tested, `keek` shows the smallest increase in memory consumption as file size grows.
 
